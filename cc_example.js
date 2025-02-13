@@ -1,0 +1,14 @@
+// Task 5
+
+let orders = [
+    { id: 101, customer: "Alice", total: 300 },
+    { id: 102, customer: "Bob", total: 450 },
+    { id: 103, customer: "Charlie", total: 200 }
+];
+
+function findOrders(orders, orderId) {
+    return orders.find(order => order.id === orderId);
+}
+
+console.log(findOrders(orders, 101)); // { id: 101, customer: "Alice", total: 300 }
+
