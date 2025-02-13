@@ -18,10 +18,23 @@ let inventory = {
     items: [],
     addItem(name, quantity) {
         this.items.push({ name, quantity });
+    },
+    removeLatestItem() {
+        this.items.pop();
+    },
+    removeFirstItem() {
+        this.items.shift();
     }
 };
 inventory.addItem("Monitor", 5);
 inventory.addItem("Keyboard", 10);
-console.log(inventory.items);
-// Expected output: [{ name: "Monitor", quantity: 5 }, { name: "Keyboard", quantity: 10 }]
+inventory.addItem("Mouse", 3);
+console.log(inventory.items); //pre item removal
+inventory.removeLatestItem();
+console.log(inventory.items); // post item removal
+inventory.removeFirstItem();
+console.log(inventory.items); // post first item removal
+
+
+//Task 7
 
