@@ -12,3 +12,16 @@ function findOrders(orders, orderId) {
 
 console.log(findOrders(orders, 101)); // { id: 101, customer: "Alice", total: 300 }
 
+// Task 6
+
+let inventory = {
+    items: [],
+    addItem(name, quantity) {
+        this.items.push({ name, quantity });
+    }
+};
+inventory.addItem("Monitor", 5);
+inventory.addItem("Keyboard", 10);
+console.log(inventory.items);
+// Expected output: [{ name: "Monitor", quantity: 5 }, { name: "Keyboard", quantity: 10 }]
+
